@@ -55,7 +55,7 @@ docker-compose up -d
 dotnet run
 ```
 
-5. Open browser on [Localhost](http://localhost:7172)
+5. Open browser on [localhost](http://localhost:7172)
 
 ## ToDo
 

@@ -33,6 +33,15 @@ docker-compose up -d
 ```
 3. Make sure to update the database connection string in appsettings.json with the correct values.
 
+- For MSSQL Docker image: 
+```json
+{
+  "ConnectionStrings": {
+    "MoviesConnection": "Server=localhost;Database=Movies;User Id=sa;Password=sol@aireDeAstor4;"
+  }
+}
+```
+- For local MSSQL Server add your user and password
 ```json
 {
   "ConnectionStrings": {

@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  sql-server:
+    build:
+      context: .
+      dockerfile: Dockerfile-MSSQL
+    ports:
+      - "1433:1433"
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "sol@aireDeAstor4"

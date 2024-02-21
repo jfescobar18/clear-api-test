@@ -12,6 +12,6 @@ namespace DB
         [MaxLength(100)]
         public string Title { get; set; }
 
-        public virtual ICollection<Movie> Movies { get; set; }
+        public virtual ICollection<Movie>? Movies { get; set; }
     }
 }

@@ -11,8 +11,8 @@ public class MovieActor
     public int ActorId { get; set; }
 
     [ForeignKey("MovieId")]
-    public virtual Movie Movie { get; set; }
+    public virtual Movie? Movie { get; set; }
 
     [ForeignKey("ActorId")]
-    public virtual  Actor Actor { get; set; }
+    public virtual  Actor? Actor { get; set; }
 }

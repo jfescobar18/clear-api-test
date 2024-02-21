@@ -22,7 +22,18 @@ public class MoviesController : ControllerBase
     [HttpGet]
     public ActionResult<IEnumerable<Movie>> GetMovies()
     {
-        return _context.Movies.ToList();
+        var movieActorsInfo = _context.MovieActors
+        .Include(ma => ma.Movie)
+        .Include(ma => ma.Actor)
+        .ToList();
+
+        var responseList = movieActorsInfo.Select(ma => new MovieActorResponseDto
+        {
+            title = ma.Movie?.Title,
+            actors = ma.Actor?.Name
+        }).ToList();
+
+        return Ok(responseList);
     }
 
     // GET: api/Movies/1
